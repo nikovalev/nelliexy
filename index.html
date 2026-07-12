@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atonement — English Lesson</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+:root{
+  --ink:#3a3122;--ink-soft:#5f5238;--accent:#7c8a5e;--accent2:#a86a4e;
+  --gold:#b8985a;--green:#5f8a4c;--red:#b5573a;
+  --glass:rgba(247,242,230,.78);--glass2:rgba(250,246,236,.66);--border:rgba(120,100,60,.30);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'EB Garamond',serif;color:var(--ink);background:#1a1712;position:relative;overflow-x:hidden;}
+.bg{position:fixed;inset:0;background:url('background.png') center/cover no-repeat;filter:blur(3px) brightness(.62) saturate(1.08);transform:scale(1.06);z-index:-3;}
+.bg-tint{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 50% 30%, rgba(40,45,30,.18), rgba(15,13,9,.55));}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.sticker{position:fixed;pointer-events:none;z-index:0;filter:drop-shadow(0 8px 22px rgba(0,0,0,.4))}
+.st1{top:-10px;right:-25px;width:300px;animation:sway 9s ease-in-out infinite}
+.st2{bottom:-15px;left:-25px;width:230px;animation:sway 11s ease-in-out infinite reverse}
+.st3{top:38%;left:-40px;width:150px;opacity:.9;animation:floaty 7s ease-in-out infinite}
+.st4{top:60%;right:-30px;width:170px;opacity:.9;animation:floaty 8.5s ease-in-out infinite reverse}
+@keyframes sway{0%,100%{transform:rotate(0deg)}50%{transform:rotate(3.5deg)}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-16px) rotate(-2deg)}}
+.wrap{position:relative;z-index:2;max-width:900px;margin:0 auto;padding:60px 22px 120px}
+section{margin-bottom:70px;position:relative}
+.card{background:var(--glass);backdrop-filter:blur(9px) saturate(1.2);-webkit-backdrop-filter:blur(9px) saturate(1.2);
+  border:1px solid var(--border);border-radius:22px;padding:40px 44px;
+  box-shadow:0 20px 55px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.5);position:relative;overflow:hidden;}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}
+.kicker{font-size:.78rem;letter-spacing:5px;text-transform:uppercase;color:var(--accent2);margin-bottom:12px}
+.hero{text-align:center;padding-top:40px}
+h1{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:5rem;color:#f6efdb;text-shadow:0 5px 28px rgba(0,0,0,.7);line-height:1.02;letter-spacing:1px}
+h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:2.6rem;color:#463a26;line-height:1.1}
+.divider{width:90px;height:2px;margin:18px 0 26px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero .divider{margin:22px auto}
+.lead{font-style:italic;color:var(--ink-soft);font-size:1.25rem;margin-bottom:12px}
+.hero .subtitle{color:#e9ddbe;font-style:italic;font-size:1.4rem;margin-top:10px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.subtitle{color:var(--ink-soft);font-style:italic;font-size:1.15rem;margin:6px 0 14px}
+.hero .note{color:#cdbf9c;letter-spacing:3px;text-transform:uppercase;font-size:.8rem;margin-top:26px}
+p.body{font-size:1.14rem;line-height:1.8}
+.scrolldown{margin-top:50px;color:#e9ddbe;font-size:2rem;animation:bob 1.8s ease-in-out infinite;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(12px);opacity:1}}
+
+/* WARMUP */
+.warmup-img{display:block;width:100%;max-width:620px;margin:0 auto 33px auto;border-radius:1em;box-shadow:0 8px 32px rgba(0,0,0,0.16);
+  mask-image:radial-gradient(circle at 75% 20%,#fff 96%,transparent 100%);
+  -webkit-mask-image:radial-gradient(circle at 75% 17%,#fff 95%,transparent 100%);
+  filter:blur(.65px) saturate(1.07);transition:filter .4s;}
+.warmup-img:hover{filter:blur(0px) saturate(1.1);}
+.wulist{margin:0;padding:0;list-style:none;}
+.wulist li{font-size:1.23rem;color:var(--ink);background:var(--glass2);border-left:3px solid var(--accent2);
+  border-radius:13px;padding:15px 22px;margin-bottom:14px;transition:transform .29s,box-shadow .29s;}
+.wulist li:hover{transform:translateX(8px);box-shadow:0 10px 24px rgba(0,0,0,.11);}
+
+/* VOCAB */
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:10px}
+.vcard{background:var(--glass2);border:1px solid var(--border);border-radius:15px;padding:18px 20px;cursor:pointer;min-height:90px;transition:transform .35s, box-shadow .35s, background .35s;}
+.vcard:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:0 14px 30px rgba(0,0,0,.2);background:rgba(255,252,244,.8)}
+.vcard .w{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#463a26}
+.vcard .pos{font-size:.82rem;font-style:italic;color:var(--accent2);margin-left:8px;font-family:'EB Garamond',serif;}
+.vcard .en{font-size:.98rem;color:var(--ink-soft);margin-top:4px;line-height:1.4}
+.vcard .ru{font-size:1.02rem;color:var(--accent2);margin-top:0;max-height:0;overflow:hidden;opacity:0;transition:max-height .45s ease, opacity .45s, margin-top .45s}
+.vcard.open .ru{max-height:90px;opacity:1;margin-top:10px}
+
+/* VIDEO */
+.videobox{border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 16px 45px rgba(0,0,0,.5);background:#000;transition:transform .4s}
+.videobox:hover{transform:scale(1.008)}
+video{display:block;width:100%}
+.subs{margin-top:18px;border:1px solid var(--border);border-radius:13px;background:var(--glass2);max-height:0;overflow:hidden;transition:max-height .7s ease}
+.subs.open{max-height:420px;overflow-y:auto}
+.subs.open::-webkit-scrollbar{width:9px}
+.subs.open::-webkit-scrollbar-track{background:transparent;margin:8px 0}
+.subs.open::-webkit-scrollbar-thumb{background:rgba(120,100,60,.4);border-radius:20px;border:2px solid transparent;background-clip:content-box}
+.subs.open::-webkit-scrollbar-thumb:hover{background:rgba(120,100,60,.65);background-clip:content-box}
+.subs{scrollbar-width:thin;scrollbar-color:rgba(120,100,60,.4) transparent}
+.subs .in{padding:22px 26px}
+.subline{padding:7px 0;border-bottom:1px dashed rgba(120,100,60,.22);font-size:1.08rem;line-height:1.5}
+.subline:last-child{border:none}
+.subline.speak{color:#463a26;font-weight:500}
+
+/* BUTTONS */
+.btn{background:var(--accent2);color:#f7efdc;border:none;padding:12px 30px;border-radius:11px;cursor:pointer;
+  font-family:'EB Garamond',serif;font-size:1.08rem;letter-spacing:.3px;transition:transform .28s, box-shadow .28s, background .28s;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+.btn:hover{transform:translateY(-4px);background:#bd7a5c;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.btn.ghost{background:transparent;border:1px solid var(--accent);color:#4a5a34;box-shadow:none}
+.btn.ghost:hover{background:rgba(124,138,94,.16)}
+.btn:active{transform:translateY(-1px)}
+.center{text-align:center;margin-top:22px}
+.res{margin-top:16px;font-style:italic;font-size:1.12rem;min-height:26px;text-align:center}
+.ok{color:var(--green)}.no{color:var(--red)}
+
+/* QUIZ */
+.q{margin-bottom:24px}
+.qt{font-size:1.16rem;margin-bottom:12px;color:#463a26}
+.qt b{color:var(--accent2)}
+.opt{display:block;width:100%;text-align:left;background:var(--glass2);border:1px solid var(--border);color:var(--ink);
+  padding:13px 20px;border-radius:11px;margin-bottom:10px;cursor:pointer;font-family:inherit;font-size:1.05rem;transition:all .28s}
+.opt:hover{border-color:var(--accent);transform:translateX(6px)}
+.opt.correct{background:var(--green);color:#fff;border-color:var(--green)}
+.opt.wrong{background:var(--red);color:#fff;border-color:var(--red)}
+.feedback{font-style:italic;margin-top:2px;min-height:20px;color:var(--ink-soft)}
+.score{text-align:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:#463a26;margin-top:16px}
+
+/* MATCH HALVES */
+.match-halves{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:30px 0 6px 0;position:relative}
+.mh-col{border-radius:13px;background:var(--glass2);padding:20px 16px;min-height:120px;border:1px solid var(--border);}
+.mh-part{font-size:1.09rem;color:var(--ink);padding:14px 16px;border-radius:9px;margin:9px 0;cursor:pointer;
+  background:rgba(255,252,244,.55);border:1px solid var(--border);transition:background .25s,box-shadow .25s,transform .22s,border-color .25s,opacity .4s;}
+.mh-part:hover{background:rgba(176,148,101,.16);box-shadow:0 8px 18px rgba(0,0,0,.08);transform:scale(1.03);}
+.mh-part.selected{background:var(--accent2);color:#fff !important;border-color:var(--accent2);box-shadow:0 6px 18px rgba(160,70,20,.14);}
+.mh-part.gone{opacity:0;transform:scale(.8);pointer-events:none;margin:0;padding:0 16px;max-height:0;overflow:hidden;border:none;}
+.mh-feedback{margin-top:14px;min-height:26px;text-align:center;font-size:1.1rem;font-style:italic;}
+/* Всплывающее собранное предложение */
+.mh-popup{position:fixed;left:50%;top:38%;transform:transl(-50%,-50%) scale(.85);
+  background:var(--green);color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.7rem;
+  padding:22px 40px;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.4);z-index:9998;
+  opacity:0;pointer-events:none;transition:opacity .4s, transform .4s;text-align:center;max-width:80vw;}
+.mh-popup.show{opacity:1;transform:translate(-50%,-50%) scale(1);}
+
+/* READING */
+.readtext{background:var(--glass2);border-radius:13px;padding:34px 30px;margin-bottom:20px;border:1px solid var(--border);font-size:1.14rem;line-height:1.9;position:relative;}
+.readtext p{margin-bottom:18px}
+.readtext p:last-child{margin-bottom:0}
+.rtoken{color:var(--accent2);font-weight:600;cursor:pointer;border-bottom:1.5px dotted var(--accent2);transition:color .3s;}
+.rtoken:hover{color:var(--green);border-color:var(--green);}
+#rtip{position:fixed;z-index:9999;max-width:290px;padding:14px 18px;font-size:1rem;line-height:1.5;
+  background:#fff9ecf5;border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.28);color:var(--ink);border:1px solid #c9b180;
+  display:none;pointer-events:none;}
+#rtip b{color:var(--accent2)}
+
+/* FILL GAPS */
+.fillg-box{display:flex;gap:12px;flex-wrap:wrap;background:var(--glass2);padding:18px;margin-bottom:24px;border-radius:13px;border:1px dashed var(--border);}
+.fg-token{padding:7px 16px;border-radius:22px;background:rgba(124,138,94,.9);color:#fff;font-weight:600;cursor:grab;transition:background .2s, transform .2s;}
+.fg-token:hover{transform:translateY(-3px) scale(1.05)}
+.fg-token.placed{background:rgba(124,138,94,.3);color:#6d6a52;cursor:default;}
+.fillg-line{font-size:1.14rem;line-height:2;margin-bottom:16px;}
+.fg-drop{display:inline-block;min-width:110px;padding:5px 16px;border:2px dashed var(--accent);border-radius:12px;text-align:center;background:rgba(124,138,94,.08);color:var(--accent);font-size:1.06rem;transition:all .25s;}
+.fg-drop.active{border-color:var(--green);background:rgba(95,138,76,.18);}
+.fg-drop.full{background:var(--green);color:#fff;border-color:var(--green);border-style:solid;}
+
+/* WATERLILY */
+.lilyflow-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:14px 0;justify-items:center;}
+.lilyimgbox{position:relative;width:200px;max-width:30vw;cursor:pointer;transition:transform .4s;}
+.lilyimgbox:hover{transform:scale(1.05) rotate(-1deg);}
+.lilyimg{width:100%;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,.3));}
+.lilyq{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:22% 16%;font-family:'Cormorant Garamond',serif;font-size:1.02rem;font-weight:600;color:#2c3320;
+  text-shadow:0 0 10px #fff,0 0 18px #eafbe0,0 2px 6px rgba(255,255,255,.9);line-height:1.3;transition:opacity .5s;}
+.lily-flower{position:absolute;left:50%;top:50%;width:78%;transform:translate(-50%,-50%) scale(0);opacity:0;
+  pointer-events:none;filter:drop-shadow(0 6px 18px rgba(0,0,0,.25));transition:transform .7s cubic-bezier(.2,.9,.3,1.4), opacity .6s;}
+.lilyimgbox.bloom .lily-flower{transform:translate(-50%,-50%) scale(1) rotate(360deg);opacity:1;}
+.lilyimgbox.bloom .lilyq{opacity:0;}
+
+/* HOMEWORK */
+.hwbox{background:var(--glass2);border:1px solid var(--border);border-radius:15px;padding:26px 28px;margin-top:8px}
+.hwbox h3{font-family:'Cormorant Garamond',serif;color:#463a26;font-size:1.6rem;margin-bottom:10px}
+.hwbox ul{margin:12px 0 0 22px}
+.hwbox li{margin-bottom:10px;font-size:1.1rem;line-height:1.5}
+
+/* SOUND */
+.sound-toggle{position:fixed;top:22px;right:22px;z-index:40;background:rgba(30,26,18,.55);backdrop-filter:blur(10px);
+  border:1px solid rgba(180,152,90,.35);color:#f0e4c4;padding:11px 20px;border-radius:30px;cursor:pointer;font-family:'EB Garamond',serif;font-size:1rem;letter-spacing:.5px;transition:transform .25s,background .25s}
+.sound-toggle:hover{transform:scale(1.06);background:rgba(180,152,90,.3)}
+.sound-panel{position:fixed;top:22px;right:22px;z-index:40;display:flex;align-items:center;gap:12px;}
+.sound-panel .sound-toggle{position:static}
+#volSlider{-webkit-appearance:none;appearance:none;width:110px;height:5px;border-radius:20px;cursor:pointer;background:rgba(180,152,90,.45);backdrop-filter:blur(10px);transition:opacity .3s;}
+#volSlider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:var(--gold);border:2px solid #f0e4c4;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.4);transition:transform .2s;}
+#volSlider::-webkit-slider-thumb:hover{transform:scale(1.2)}
+#volSlider::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--gold);border:2px solid #f0e4c4;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.4);}
+#volSlider::-moz-range-track{height:5px;border-radius:20px;background:rgba(180,152,90,.45);}
+.progressbar{position:fixed;top:0;left:0;height:4px;width:0;z-index:50;background:linear-gradient(90deg,var(--gold),var(--accent2))}
+
+@media(max-width:680px){
+  h1{font-size:3rem}h2{font-size:2rem}
+  .vgrid,.match-halves{grid-template-columns:1fr}
+  .card{padding:28px 22px}
+  .st1{width:170px}.st2{width:140px}.st3,.st4{display:none}
+  .lilyflow-wrap{grid-template-columns:repeat(2,1fr)}
+  .lilyimgbox{max-width:42vw}
+  .mh-popup{font-size:1.3rem;padding:18px 24px}
+}
+</style>
+</head>
+<body>
+ <div class="progressbar" id="pbar"></div>
+ <div class="bg"></div>
+ <div class="bg-tint"></div>
+ <div class="grain"></div>
+ <img class="sticker st1" src="sticker1.png" alt="">
+ <img class="sticker st2" src="sticker2.png" alt="">
+ <img class="sticker st3" src="sticker3.png" alt="">
+ <img class="sticker st4" src="sticker4.png" alt="">
+ <div class="sound-panel">
+   <button class="sound-toggle" id="soundBtn">Music: off</button>
+   <input type="range" id="volSlider" min="0" max="100" value="32">
+ </div>
+ <div id="rtip"></div>
+ <div class="mh-popup" id="mhPopup"></div>
+ <div class="wrap">
+
+  <section class="hero">
+    <div class="kicker reveal" style="text-align:center">English Lesson · Level C1–C2</div>
+    <h1 class="reveal d1">Atonement</h1>
+    <div class="divider reveal d2"></div>
+    <p class="subtitle reveal d2" style="color:#e9ddbe">The reunion scene — Robbie &amp; Cecilia</p>
+        <p class="note reveal d3">Love · Guilt · Redemption</p>
+    <div class="scrolldown reveal d4">⌄</div>
+  </section>
+
+  <!-- ===== WARM-UP ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Before We Begin</div>
+      <h2 class="reveal">Warm-Up Discussion</h2>
+      <div class="divider reveal"></div>
+      <img class="warmup-img reveal" src="warmup.png" alt="Reunion scene">
+      <ul class="wulist reveal">
+        <li>Have you ever done something you deeply regretted? Did you try to make up for it?</li>
+        <li>Do you think love can survive years of separation?</li>
+        <li>What does the word "forgiveness" mean to you?</li>
+        <li>Can a single mistake change the whole course of a life?</li>
+        <li>Do you believe we can ever truly “atone” for our biggest mistakes?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SCENE WITH SUBTITLES ===== -->
+  <section>
+    <div class="card">
+      <h2 class="reveal">Scene: Reunion in the Café</h2>
+      <div class="divider reveal"></div>
+      <div class="videobox reveal">
+        <video id="player" controls preload="metadata" playsinline controlslist="nodownload">
+          <source src="passage.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="center reveal">
+        <button class="btn ghost" id="subBtn">Show transcript</button>
+      </div>
+      <div class="subs" id="subs"><div class="in"><div id="subLines"></div></div></div>
+    </div>
+  </section>
+
+  <!-- ===== VOCABULARY ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Key Vocabulary</div>
+      <h2 class="reveal">Vocabulary</h2>
+      <div class="divider reveal"></div>
+      <div class="subtitle">Click a card to reveal translation.</div>
+      <div class="vgrid" id="vocab"></div>
+    </div>
+  </section>
+
+  <!-- ===== MATCH-UP: HALVES ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Sentence Halves</div>
+      <h2 class="reveal">Match the Halves</h2>
+      <div class="divider"></div>
+      <p class="lead">Match the beginning and ending of sentences using the lesson's target words—from the scene and context.</p>
+      <div class="match-halves" id="matchHalves"></div>
+      <div class="mh-feedback" id="mhFeedback"></div>
+    </div>
+  </section>
+
+  <!-- ===== READING TEXT WITH WORDS ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Reading in Context</div>
+      <h2 class="reveal">Reading</h2>
+      <div class="divider"></div>
+      <div class="readtext" id="readingText"></div>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ : COMPREHENSION ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Comprehension</div>
+      <h2 class="reveal">Comprehension Check</h2>
+      <div class="divider"></div>
+      <div id="quiz" class="reveal"></div>
+      <div class="score" id="quizScore"></div>
+    </div>
+  </section>
+
+  <!-- ===== GAP FILL (DRAG) ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Drag the Words</div>
+      <h2 class="reveal">Fill in the Gaps</h2>
+      <div class="divider"></div>
+      <p class="lead">Drag the words into the right places in the sentences:</p>
+      <div class="fillg-box" id="fgWords"></div>
+      <div class="fillg-wrap" id="fgWrap"></div>
+      <div class="center fg-check"><button class="btn" id="fgCheck">Check answers</button></div>
+      <div class="res" id="fgRes"></div>
+    </div>
+  </section>
+
+  <!-- ===== WATERLILY PERSONAL QUESTIONS ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Reflection</div>
+      <h2 class="reveal">Personal Questions</h2>
+      <div class="divider"></div>
+      <p class="lead">Click each water lily to let it bloom.</p>
+      <div class="lilyflow-wrap" id="lilyflow"></div>
+    </div>
+  </section>
+
+  <!-- ===== HOMEWORK ===== -->
+  <section>
+    <div class="card">
+      <div class="kicker reveal">Final Task</div>
+      <h2 class="reveal">Homework</h2>
+      <div class="divider"></div>
+      <div class="hwbox reveal">
+        <h3>Choose your final creative task:</h3>
+        <ul>
+          <li>Reflective essay (250 words): “What does atonement mean to me after watching this scene?”</li>
+          <li>Audio commentary (2 min) on guilt, forgiveness, or longing, using vocabulary of the lesson.</li>
+          <li>A letter to yourself from the future, imagining you’ve discovered a path to your own forgiveness.</li>
+        </ul>
+        <p style="margin-top:14px;font-style:italic;color:var(--ink-soft)">
+          Use at least <b>six</b> vocabulary items from this lesson.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <section class="hero">
+    <h1 class="reveal" style="font-size:3.4rem">"Come back to me."</h1>
+    <div class="divider reveal d1"></div>
+    <p class="subtitle reveal d1">— Cecilia Tallis, <em>Atonement</em></p>
+    <p class="note reveal d2">The End · Well done</p>
+  </section>
+</div>
+
+<script>
+/* ==== SOUND ==== */
+let AC=null;
+function ensure(){ if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){}} if(AC&&AC.state==='suspended')AC.resume();}
+function tone(freq,dur=0.09,type='sine',vol=0.15){
+  if(!AC) return;
+  const o=AC.createOscillator(),g=AC.createGain();
+  o.type=type;o.frequency.value=freq;o.connect(g);g.connect(AC.destination);
+  const t=AC.currentTime;
+  g.gain.setValueAtTime(0,t);
+  g.gain.linearRampToValueAtTime(vol,t+0.012);
+  g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  o.start(t);o.stop(t+dur+0.02);
+}
+const sClick =()=>{ensure();tone(523,0.07,'triangle',0.12);};
+const sSelect=()=>{ensure();tone(392,0.06,'sine',0.10);};
+const sFlip  =()=>{ensure();tone(660,0.05,'triangle',0.09);};
+const sOk    =()=>{ensure();tone(659,0.10,'sine',0.14);setTimeout(()=>tone(880,0.16,'sine',0.13),90);};
+const sNo    =()=>{ensure();tone(220,0.16,'sawtooth',0.11);}
+const sBloom =()=>{ensure();tone(523,0.1,'sine',0.12);setTimeout(()=>tone(659,0.12,'sine',0.11),80);setTimeout(()=>tone(784,0.16,'sine',0.10),170);};
+document.addEventListener('click', e=>{ if(e.target.closest('.btn'))sClick(); });
+
+/* ============ BG MUSIC ============ */
+const music=document.createElement('audio');
+music.loop=true; music.src='ambient.mp3'; music.preload='auto';
+document.body.appendChild(music);
+const soundBtn=document.getElementById('soundBtn');
+const volSlider=document.getElementById('volSlider');
+let musicOn=false;
+music.volume=volSlider.value/100;
+soundBtn.onclick=()=>{
+  ensure();
+  if(musicOn){ music.pause(); soundBtn.textContent='Music: off'; musicOn=false; }
+  else{ music.play().catch(()=>{}); soundBtn.textContent='Music: on'; musicOn=true; }
+};
+volSlider.oninput=()=>{ music.volume=volSlider.value/100; };
+
+/* ============ VOCABULARY ============ */
+const vocab=[
+  {w:'atone',pos:'v.',en:'to make amends for a wrong or sin',ru:'искупать (вину), заглаживать'},
+  {w:'redemption',pos:'n.',en:'the act of being saved from error or guilt',ru:'искупление, спасение'},
+  {w:'irrevocable',pos:'adj.',en:'impossible to change or undo',ru:'непоправимый, необратимый'},
+  {w:'remorse',pos:'n.',en:'deep regret for a wrong committed',ru:'угрызения совести, раскаяние'},
+  {w:'yearning',pos:'n.',en:'an intense, aching longing',ru:'тоска, страстное желание'},
+  {w:'haunted',pos:'adj.',en:'persistently troubled by memory or guilt',ru:'преследуемый (воспоминаниями)'},
+  {w:'fleeting',pos:'adj.',en:'lasting only a very short time',ru:'мимолётный, быстротечный'},
+  {w:'testimony',pos:'n.',en:'a formal statement given as evidence',ru:'свидетельство, показание'},
+  {w:'reconcile',pos:'v.',en:'to restore friendly relations; to accept',ru:'примирять(ся), смириться'},
+  {w:'restraint',pos:'n.',en:'self-control; holding back emotion',ru:'сдержанность, самообладание'},
+];
+const vEl=document.getElementById('vocab');
+vocab.forEach(v=>{
+  const c=document.createElement('div'); c.className='vcard';
+  c.innerHTML=`<span class="w">${v.w}<span class="pos">${v.pos}</span></span>
+               <div class="en">${v.en}</div>
+               <div class="ru">${v.ru}</div>`;
+  c.onclick=()=>{ c.classList.toggle('open'); sFlip(); };
+  vEl.appendChild(c);
+});
+
+/* ==== SUBTITLES ==== */
+const subtitles=[
+  "I'm sorry I'm late, I got lost.",
+  "- Hello.",
+  "- Hello.",
+  "- Should we sit down?",
+  "- Yes, of course.",
+  "- I'm sorry, I can't remember, I...",
+  "- Two. Thank you.",
+  "Where are you living?",
+  "Tiny flat in Balham. It's ghastly.",
+  "- The landlady's rude and horribly nosy.",
+  "- You look the same.",
+  "- Apart from the uniform, of course.",
+  "- Yes, I'm sorry. I've got to go back",
+  "- to the hospital in half an hour.",
+  "- Oh, God, that...",
+  "- Sorry.",
+  "- No.",
+  "Have you been in touch with your family?",
+  "No, I told you I wouldn't.",
+  "Leon waited outside the hospital last week,",
+  "I just pushed past him.",
+  "Cee, you don't owe me anything.",
+  "Robbie, didn't you read my letters?",
+  "Had I been allowed to visit you,",
+  "had they let me every day,",
+  "- I would have been there every day.",
+  "- Yes, but...",
+  "If all we have rests on a few moments",
+  "in a library three and a half years ago,",
+  "then I'm not sure,",
+  "- I don't know if...",
+  "- Robbie, look at me.",
+  "Look at me.",
+  "Come back.",
+  "Come back to me."
+];
+const subLines=document.getElementById('subLines');
+subtitles.forEach(s=>{
+  const d=document.createElement('div');
+  d.className='subline'+(s.startsWith('-')?'':' speak');
+  d.textContent=s;
+  subLines.appendChild(d);
+});
+const subs=document.getElementById('subs'), subBtn=document.getElementById('subBtn');
+subBtn.onclick=()=>{
+  subs.classList.toggle('open');
+  subBtn.textContent=subs.classList.contains('open')?'Hide transcript':'Show transcript';
+};
+
+/* ==== MATCH-UP HALVES ==== */
+const halvesA = [
+  "Her remorse was",
+  "Their reunion was",
+  "Every word was filled with",
+  "The consequences were",
+  "He tried for years to",
+  "They met with a sense of"
+];
+const halvesB = [
+  "apparent in every letter she wrote.",
+  "fleeting, but full of meaning.",
+  "yearning, unspoken yet palpable.",
+  "an irrevocable turning point.",
+  "atone for what could not be undone.",
+  "restraint, beneath the surface."
+];
+const correctMatch = [0,1,2,3,4,5]; // A[i] pairs with B[i]
+function shuffleArr(arr){let a=[...arr];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+const matchEl = document.getElementById('matchHalves');
+const mhPopup = document.getElementById('mhPopup');
+let orderB = shuffleArr([0,1,2,3,4,5]);
+let matchSelA=null, matchSelB=null, matches=0;
+
+function renderMatchHalves(){
+  let A='',B='';
+  halvesA.forEach((txt,i)=>{
+    A+=`<div class="mh-part" data-side="A" data-idx="${i}">${String.fromCharCode(65+i)}) ${txt}...</div>`;
+  });
+  orderB.forEach((bi,pos)=>{
+    B+=`<div class="mh-part" data-side="B" data-idx="${bi}">${pos+1}. ...${halvesB[bi]}</div>`;
+  });
+  matchEl.innerHTML = `<div class="mh-col" id="mhColA">${A}</div><div class="mh-col" id="mhColB">${B}</div>`;
+}
+renderMatchHalves();
+
+function showPopup(text){
+  mhPopup.textContent = text;
+  mhPopup.classList.add('show');
+  setTimeout(()=>mhPopup.classList.remove('show'),1900);
+}
+
+matchEl.onclick = function(e){
+  let t=e.target.closest('.mh-part');
+  if(!t || t.classList.contains('gone')) return;
+  sSelect();
+  if(t.dataset.side==="A"){ if(matchSelA) matchSelA.classList.remove('selected'); matchSelA=t; matchSelA.classList.add('selected'); }
+  else { if(matchSelB) matchSelB.classList.remove('selected'); matchSelB=t; matchSelB.classList.add('selected'); }
+  const feedback=document.getElementById('mhFeedback');
+  if(matchSelA && matchSelB){
+    let idxA=+matchSelA.dataset.idx, idxB=+matchSelB.dataset.idx;
+    if(correctMatch[idxA]===idxB){
+      matches++; sOk();
+      feedback.textContent="Correct!";
+      showPopup(`${halvesA[idxA]} ${halvesB[idxB]}`);
+      const a=matchSelA,b=matchSelB;
+      a.classList.remove('selected'); b.classList.remove('selected');
+      setTimeout(()=>{ a.classList.add('gone'); b.classList.add('gone'); },350);
+      matchSelA=null; matchSelB=null;
+      if(matches===halvesA.length){ setTimeout(()=>feedback.textContent="All pairs matched! Beautifully done.",400); }
+    }else{
+      sNo(); feedback.textContent="Not quite — try another ending.";
+      matchSelA.classList.remove('selected'); matchSelB.classList.remove('selected');
+      matchSelA=null; matchSelB=null;
+      setTimeout(()=>{ if(matches<halvesA.length) feedback.textContent=""; },1300);
+    }
+  }
+};
+
+/* ==== READING WITH HIGHLIGHTED VOCAB ==== */
+const readingData = [
+  {t:"The café was quiet that afternoon, save for the faint clatter of cups. When she finally arrived, breathless and pale, their long-awaited ",k:false},
+  {t:"reunion",k:false},
+  {t:" felt strangely ",k:false},
+  {t:"fleeting",k:true,a:"lasting only a very short time",r:"мимолётный"},
+  {t:" — as though the years apart had compressed into a single trembling minute. Neither of them dared to speak too quickly, and the whole room seemed ",k:false},
+  {t:"haunted",k:true,a:"persistently troubled by memory or guilt",r:"преследуемый (воспоминаниями)"},
+  {t:" by the silence of everything they could not say.\n\n",k:false},
+  {t:"Between them, a quiet ",k:false},
+  {t:"remorse",k:true,a:"deep regret for a wrong committed",r:"угрызения совести"},
+  {t:" hung in the air, mingled with a deep ",k:false},
+  {t:"yearning",k:true,a:"an intense, aching longing",r:"тоска, страстное желание"},
+  {t:" that neither dared to name. She wanted to explain, to offer some kind of ",k:false},
+  {t:"testimony",k:true,a:"a formal statement given as evidence",r:"свидетельство, показание"},
+  {t:" of the truth she had once withheld — but the past had already hardened into something ",k:false},
+  {t:"irrevocable",k:true,a:"impossible to change or undo",r:"непоправимый"},
+  {t:". No confession, however sincere, could ever fully ",k:false},
+  {t:"atone",k:true,a:"to make amends for a wrong or sin",r:"искупать, заглаживать"},
+  {t:" for what had been lost.\n\n",k:false},
+  {t:"And yet, sitting across from one another, they tried in their fragile way to ",k:false},
+  {t:"reconcile",k:true,a:"to restore friendly relations; to accept",r:"примирять(ся)"},
+  {t:" the people they had been with the people they had become. Perhaps forgiveness, if it comes at all, is not a single grand gesture but a slow act of ",k:false},
+  {t:"restraint",k:true,a:"self-control; holding back emotion",r:"сдержанность"},
+  {t:" — a willingness to stay, to listen, and to hope, one breath at a time.",k:false}
+];
+function readingRender(){
+  let html=''; let idx=0;
+  for(const w of readingData){
+    let txt = w.t.replace(/\n\n/g,'</p><p>');
+    if(w.k){
+      html+=`<span class="rtoken" data-en="${w.a}" data-ru="${w.r}">${txt}</span>`;
+    } else html+=txt;
+    idx++;
+  }
+  document.getElementById('readingText').innerHTML = `<p>${html}</p>`;
+}
+readingRender();
+const rtip=document.getElementById('rtip');
+document.getElementById('readingText').addEventListener('mousemove',e=>{
+  const el=e.target.closest('.rtoken');
+  if(!el){ rtip.style.display='none'; return; }
+  rtip.innerHTML = `${el.dataset.en}<br><b>${el.dataset.ru}</b>`;
+  rtip.style.display='block';
+  const pad=12, w=rtip.offsetWidth, h=rtip.offsetHeight;
+  let x=e.clientX+pad, y=e.clientY+pad;
+  if(x+w>window.innerWidth-8) x=window.innerWidth-w-8;
+  if(y+h>window.innerHeight-8) y=window.innerHeight-h-8;
+  rtip.style.left=x+'px'; rtip.style.top=y+'px';
+});
+document.getElementById('readingText').addEventListener('mouseleave',()=>{rtip.style.display='none';});
+
+/* ==== COMPREHENSION QUIZ ==== */
+const quiz=[
+  {q:'Why is the room described as "haunted"?', opts:[
+    "Because it is dark and empty",
+    "Because of the silence of everything unsaid",
+    "Because someone died there",
+    "Because of actual ghosts"
+  ],correct:1,fb:'It is haunted by the silence of what they could not say.'},
+  {q:'What has become "irrevocable" in the passage?', opts:[
+    "Forgiveness","The past","Their reunion","Her testimony"
+  ],correct:1,fb:'The past had hardened into something irrevocable.'},
+  {q:'True or false: The text says a sincere confession can fully atone for the loss.',opts:["True","False"],correct:1,fb:'No confession could ever fully atone for what was lost.'},
+  {q:'According to the text, forgiveness is best described as...',opts:[
+    "A single grand gesture","A slow act of restraint","An immediate decision","A legal testimony"
+  ],correct:1,fb:'It is a slow act of restraint, one breath at a time.'},
+  {q:'Which emotion dominates the atmosphere of the scene?',opts:[
+    "Joy and relief","Anger and blame","Yearning and remorse","Pride and confidence"
+  ],correct:2,fb:'Yearning and remorse fill the air between them.'}
+];
+const quizEl=document.getElementById('quiz');
+let answered=0, correctCount=0;
+quiz.forEach((item,qi)=>{
+  const box=document.createElement('div'); box.className='q';
+  const t=document.createElement('div'); t.className='qt';
+  t.innerHTML=`<b>${qi+1}.</b> ${item.q}`; box.appendChild(t);
+  item.opts.forEach((opt,oi)=>{
+    const b=document.createElement('button'); b.className='opt'; b.textContent=opt;
+    b.onclick=()=>{
+      if(box.dataset.done)return;
+      sSelect(); box.dataset.done='1'; answered++;
+      const btns=box.querySelectorAll('.opt'); btns.forEach(x=>x.disabled=true);
+      if(oi===item.correct){ b.classList.add('correct'); correctCount++; sOk(); }
+      else{ b.classList.add('wrong'); btns[item.correct].classList.add('correct'); sNo(); }
+      box.querySelector('.feedback').textContent=item.fb;
+      if(answered===quiz.length)
+        document.getElementById('quizScore').textContent=`Your score: ${correctCount} / ${quiz.length}`;
+    };
+    box.appendChild(b);
+  });
+  const fb=document.createElement('div'); fb.className='feedback'; box.appendChild(fb);
+  quizEl.appendChild(box);
+});
+
+/* ==== FILL THE GAPS: Drag & Drop ==== */
+const fillWords = ['atone','redemption','haunted','irrevocable','yearning','fleeting','testimony','reconcile','remorse','restraint'];
+const fgSentences = [
+  {pre:"She tried for years to",blank:0,post:"for what she had done."},
+    {pre:"Their last encounter was",blank:5,post:", almost too brief to remember."},
+  {pre:"The",blank:6,post:"of the events never changed."},
+  {pre:"He felt permanently",blank:2,post:"by guilt."},
+  {pre:"His decision was",blank:3,post:"and could not be undone."},
+  {pre:"All her letters were full of",blank:8,post:"despite her efforts to hide it."},
+  {pre:"She lived with a constant",blank:4,post:"for the happiness she lost."},
+  {pre:"There could be no",blank:1,post:"without truth."},
+  {pre:"They found it hard to",blank:7,post:"after everything."},
+  {pre:"It took real",blank:9,post:"not to let the pain show."}
+];
+let fgDropped = Array(fgSentences.length).fill(null);
+function renderFG(){
+  let pool = shuffleArr(fillWords.map((w,i)=>({w,i})));
+  document.getElementById('fgWords').innerHTML =
+    pool.map(o=>`<span class="fg-token" draggable="true" data-w="${o.w}">${o.w}</span>`).join('');
+  document.getElementById('fgWrap').innerHTML =
+    fgSentences.map((s,i)=>`<div class="fillg-line">${s.pre} <span class="fg-drop" data-i="${i}"></span> ${s.post}</div>`).join('');
+  fgDropped=Array(fgSentences.length).fill(null);
+
+  document.querySelectorAll('.fg-token').forEach(function(el){
+    el.ondragstart=function(e){e.dataTransfer.setData('text/plain',el.dataset.w);el.classList.add('dragging');sSelect();};
+    el.ondragend=function(){el.classList.remove('dragging');};
+  });
+  document.querySelectorAll('.fg-drop').forEach(function(el){
+    el.ondragover=function(e){e.preventDefault();el.classList.add('active');};
+    el.ondragleave=function(){el.classList.remove('active');};
+    el.ondrop=function(e){
+      e.preventDefault(); el.classList.remove('active');
+      let word = e.dataTransfer.getData('text/plain');
+      if(!fillWords.includes(word))return;
+      let idx = parseInt(el.dataset.i);
+      // если ячейка занята — вернём старое слово в пул
+      if(fgDropped[idx]!=null){
+        let old=fgDropped[idx];
+        document.querySelectorAll('.fg-token').forEach(t=>{ if(t.dataset.w===old) t.classList.remove('placed'); });
+      }
+      el.textContent = word; el.classList.add('full');
+      fgDropped[idx]=word;
+      document.querySelectorAll('.fg-token').forEach(t=>{ if(t.dataset.w===word) t.classList.add('placed'); });
+    };
+    el.onclick=function(){ // клик по заполненной ячейке — очистить
+      let idx=parseInt(el.dataset.i);
+      if(fgDropped[idx]!=null){
+        let old=fgDropped[idx];
+        document.querySelectorAll('.fg-token').forEach(t=>{ if(t.dataset.w===old) t.classList.remove('placed'); });
+        el.textContent=''; el.classList.remove('full'); fgDropped[idx]=null; sSelect();
+      }
+    };
+  });
+}
+renderFG();
+document.getElementById('fgCheck').onclick=function(){
+  let ok=0;
+  const drops=document.querySelectorAll('.fg-drop');
+  for(let i=0;i<fgSentences.length;i++){
+    let ans = fillWords[fgSentences[i].blank];
+    if(fgDropped[i] === ans){ ok++; drops[i].style.background='var(--green)'; drops[i].style.color='#fff'; drops[i].style.borderColor='var(--green)'; }
+    else if(fgDropped[i]!=null){ drops[i].style.background='var(--red)'; drops[i].style.color='#fff'; drops[i].style.borderColor='var(--red)'; drops[i].style.borderStyle='solid'; }
+  }
+  const r=document.getElementById('fgRes');
+  if(ok===fgSentences.length){ r.textContent=`Perfect! ${ok} / ${fgSentences.length} correct.`; r.className='res ok'; sOk(); }
+  else{ r.textContent=`You got ${ok} / ${fgSentences.length}. Review the highlighted answers.`; r.className='res no'; sNo(); }
+};
+
+/* ---- WATERLILY PERSONAL Qs ---- */
+const lilyQs=[
+  "What is the bravest apology you have ever made? How did it feel?",
+  "Do you think everyone deserves redemption, no matter the mistake?",
+  "If you could go back and change one moment, would you? Why?",
+  "Why do people sometimes choose not to forgive, even when they want to?",
+  "Do stories help us heal from regret? Why or why not?",
+  "Is silence ever a form of atonement, or only of avoidance?"
+];
+const lilyflow = document.getElementById('lilyflow');
+lilyflow.innerHTML = lilyQs.map(q=>`
+  <div class="lilyimgbox" title="Click to bloom">
+    <img src="lily.png" class="lilyimg" alt="">
+    <img src="flower.png" class="lily-flower" alt="">
+    <div class="lilyq">${q}</div>
+  </div>
+`).join('');
+lilyflow.addEventListener('click',e=>{
+  const box=e.target.closest('.lilyimgbox');
+  if(!box) return;
+  box.classList.toggle('bloom');
+  if(box.classList.contains('bloom')) sBloom(); else sSelect();
+});
+
+/* ============ SCROLL REVEAL ============ */
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+},{threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ============ PROGRESS BAR + PARALLAX ============ */
+const pbar=document.getElementById('pbar');
+const bg=document.querySelector('.bg');
+window.addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-innerHeight;
+  pbar.style.width=(scrollY/h*100)+'%';
+  bg.style.transform=`scale(1.06) translateY(${scrollY*0.04}px)`;
+},{passive:true});
+
+/* unlock audio on first interaction */
+document.body.addEventListener('click',ensure,{once:true});
+</script>
+</body>
+</html>
