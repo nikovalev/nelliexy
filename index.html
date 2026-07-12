@@ -14,7 +14,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'EB Garamond',serif;color:var(--ink);background:#1a1712;position:relative;overflow-x:hidden;}
-.bg{position:fixed;inset:0;background:url('background.png') center/cover no-repeat;filter:blur(3px) brightness(.62) saturate(1.08);transform:scale(1.06);z-index:-3;}
+.bg{position:fixed;inset:0;background:url('images/background.png') center/cover no-repeat;filter:blur(3px) brightness(.62) saturate(1.08);transform:scale(1.06);z-index:-3;}
 .bg-tint{position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 50% 30%, rgba(40,45,30,.18), rgba(15,13,9,.55));}
 .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.045;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
@@ -192,10 +192,10 @@ video{display:block;width:100%}
  <div class="bg"></div>
  <div class="bg-tint"></div>
  <div class="grain"></div>
- <img class="sticker st1" src="sticker1.png" alt="">
- <img class="sticker st2" src="sticker2.png" alt="">
- <img class="sticker st3" src="sticker3.png" alt="">
- <img class="sticker st4" src="sticker4.png" alt="">
+ <img class="sticker st1" src="images/sticker1.png" alt="">
+ <img class="sticker st2" src="images/sticker2.png" alt="">
+ <img class="sticker st3" src="images/sticker3.png" alt="">
+ <img class="sticker st4" src="images/sticker4.png" alt="">
  <div class="sound-panel">
    <button class="sound-toggle" id="soundBtn">Music: off</button>
    <input type="range" id="volSlider" min="0" max="100" value="32">
@@ -219,7 +219,7 @@ video{display:block;width:100%}
       <div class="kicker reveal">Before We Begin</div>
       <h2 class="reveal">Warm-Up Discussion</h2>
       <div class="divider reveal"></div>
-      <img class="warmup-img reveal" src="warmup.png" alt="Reunion scene">
+      <img class="warmup-img reveal" src="images/warmup.png" alt="Reunion scene">
       <ul class="wulist reveal">
         <li>Have you ever done something you deeply regretted? Did you try to make up for it?</li>
         <li>Do you think love can survive years of separation?</li>
@@ -701,8 +701,8 @@ const lilyQs=[
 const lilyflow = document.getElementById('lilyflow');
 lilyflow.innerHTML = lilyQs.map(q=>`
   <div class="lilyimgbox" title="Click to bloom">
-    <img src="lily.png" class="lilyimg" alt="">
-    <img src="flower.png" class="lily-flower" alt="">
+    <img src="images/lily.png" class="lilyimg" alt="">
+    <img src="images/flower.png" class="lily-flower" alt="">
     <div class="lilyq">${q}</div>
   </div>
 `).join('');
