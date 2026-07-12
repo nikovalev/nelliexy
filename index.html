@@ -237,7 +237,7 @@ video{display:block;width:100%}
       <div class="divider reveal"></div>
       <div class="videobox reveal">
         <video id="player" controls preload="metadata" playsinline controlslist="nodownload">
-          <source src="passage.mp4" type="video/mp4">
+          <source src="videos/passage.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -370,7 +370,7 @@ document.addEventListener('click', e=>{ if(e.target.closest('.btn'))sClick(); })
 
 /* ============ BG MUSIC ============ */
 const music=document.createElement('audio');
-music.loop=true; music.src='ambient.mp3'; music.preload='auto';
+music.loop=true; music.src='sounds/ambient.mp3'; music.preload='auto';
 document.body.appendChild(music);
 const soundBtn=document.getElementById('soundBtn');
 const volSlider=document.getElementById('volSlider');
